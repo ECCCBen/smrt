@@ -1,13 +1,4 @@
-
-import numpy as np
-import scipy.signal
-
-from smrt.core.globalconstants import C_SPEED
-from smrt.core.error import SMRTError, smrt_warn
-from smrt.core.result import ActiveResult
-from smrt.rtsolver.waveform_model import Brown1977
-
-import xarray as xr
+# coding: utf-8
 
 """
 Approximation:
@@ -20,6 +11,16 @@ In the medium:
  This is the isotropic assumption which is only valid for rough surfaces
  """
 
+import numpy as np
+import scipy.signal
+
+from smrt.core.globalconstants import C_SPEED
+from smrt.core.error import SMRTError, smrt_warn
+from smrt.core.result import ActiveResult
+from smrt.rtsolver.waveform_model import Brown1977
+
+import xarray as xr
+
 
 class NadirLRMAltimetry(object):
     """Solver based on Adams and Brown 1998 and Lacroix et al. 2008. Both models differ in the specific choices for the scattering and
@@ -27,8 +28,10 @@ class NadirLRMAltimetry(object):
 
     :param oversampling: integer number defining the number of subgates used for the computation in each altimeter gate.
     This is equivalent to multiply the bandwidth by this number. It is used to perform more accurate computation.
+    
     :param return_oversampled: by default the backscatter is returned for each gate. If set to True, the oversampled waveform is returned instead.
     See the 'oversampling' argument.
+    
     :param return_contributions: return volume, surface and interface backscatter contributions in addition to the total backscatter.
     """
 
