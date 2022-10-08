@@ -1,14 +1,13 @@
 # coding: utf-8
 
-"""Nadir Altimetry Low Resolution Mode radiative transfer solver
+"""Nadir Altimetry radiative transfer solver (Low Resolution Mode)
 
-Approximation:
 
-In the medium:
- - Backscatter is computed assuming only first order scattering. The propagation is then simply givern by extinction
- - Small angle approximation: to compute delay, the paths in the snow are along the z-axis. We neglect the off-nadir delay.*
+Approximation in the medium:
+ - Backscatter is computed assuming only first order scattering. The propagation is then simply given by extinction
+ - Small angle approximation: to compute delay, the paths in the snow are along the z-axis. We neglect the off-nadir delay.
  This error is likely to be small (except for very deep penetration).
- - At this stage, we consider that the backscatter of layers does not depends on theta (Geomtrical optics or other, not AIEM). 
+ - At this stage, we consider that the backscatter of layers does not depend on theta (Geometrical optics or other, not AIEM). 
  This is the isotropic assumption which is only valid for rough surfaces
  """
 
@@ -27,11 +26,9 @@ class NadirLRMAltimetry(object):
     """Solver based on Adams and Brown 1998 and Lacroix et al. 2008. Both models differ in the specific choices for the scattering and
     backscatter of the interface, but are similar in the way the waveform is calculated, which concerns the solver here.
 
-    :param oversampling: integer number defining the number of subgates used for the computation in each altimeter gate.
-    This is equivalent to multiply the bandwidth by this number. It is used to perform more accurate computation.
+    :param oversampling: integer number defining the number of subgates used for the computation in each altimeter gate. This is equivalent to multiply the bandwidth by this number. It is used to perform more accurate computation.
     
-    :param return_oversampled: by default the backscatter is returned for each gate. If set to True, the oversampled waveform is returned instead.
-    See the 'oversampling' argument.
+    :param return_oversampled: by default the backscatter is returned for each gate. If set to True, the oversampled waveform is returned instead. See the 'oversampling' argument.
     
     :param return_contributions: return volume, surface and interface backscatter contributions in addition to the total backscatter.
     
@@ -39,6 +36,7 @@ class NadirLRMAltimetry(object):
 
     # this specifies which dimension this solver is able to deal with. Those not in this list must be managed by the called (Model object)
     # e.g. here, frequency, time, ... are not managed
+    
     _broadcast_capability = {}  # "theta_inc", "polarization_inc", "theta", "phi", "polarization"}
 
     def __init__(self, waveform_model=None, oversampling=10, return_oversampled=False, skip_pfs_convolution=False,
@@ -67,7 +65,7 @@ class NadirLRMAltimetry(object):
             self.return_theta_inc_sampling = False
 
     def solve(self, snowpack, emmodels, sensor, atmosphere=None):
-        """solve the radiative transfer equation for a given snowpack, emmodels and sensor configuration.
+        """Solves the radiative transfer equation for a given snowpack, emmodel and sensor configuration.
 
 """
         if sensor.theta_inc != 0:

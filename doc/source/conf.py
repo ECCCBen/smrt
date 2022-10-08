@@ -75,7 +75,7 @@ extensions = [
 
 autosummary_generate = True
 templates_path = ['_templates']
-exclude_patterns = ['_build', '_templates']
+exclude_patterns = ['_build', '_templates', 'test*']
 autodoc_default_flags = ['members']
 
 # From https://stackoverflow.com/questions/39249466/how-to-exclude-pytest-test-functions-from-sphinx-autodoc
