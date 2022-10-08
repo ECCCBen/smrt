@@ -1,6 +1,7 @@
 # coding: utf-8
 
-"""
+"""Nadir Altimetry Low Resolution Mode radiative transfer solver
+
 Approximation:
 
 In the medium:
@@ -33,6 +34,7 @@ class NadirLRMAltimetry(object):
     See the 'oversampling' argument.
     
     :param return_contributions: return volume, surface and interface backscatter contributions in addition to the total backscatter.
+    
     """
 
     # this specifies which dimension this solver is able to deal with. Those not in this list must be managed by the called (Model object)
