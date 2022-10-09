@@ -73,6 +73,7 @@ def cryosat2_lrm():
     """ Return an altimeter instance for CryoSat-2.
 
     Parameters from https://earth.esa.int/web/eoportal/satellite-missions/c-missions/cryosat-2
+    
     Altitude from https://doi.org/10.1016/j.asr.2018.04.014
 
     Beam width is 1.08 along track and 1.2 across track
@@ -101,6 +102,7 @@ def cryosat2_sin():
     """ Return an altimeter instance for CryoSat-2: SIN mode
 
     Parameters from https://earth.esa.int/web/eoportal/satellite-missions/c-missions/cryosat-2
+    
     Altitude from https://doi.org/10.1016/j.asr.2018.04.014
     
     Beam width is 1.08 along track and 1.2 across track
