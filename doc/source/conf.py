@@ -92,7 +92,7 @@ napoleon_attr_annotations = True
 
 autosummary_generate = True
 templates_path = ['_templates']
-exclude_patterns = ['_build', '_templates', '**test**']
+exclude_patterns = ['_build', '_templates', '**test**', 'setup']
 
 # From https://stackoverflow.com/questions/39249466/how-to-exclude-pytest-test-functions-from-sphinx-autodoc
 # This is the expected signature of the handler for this event, cf doc
