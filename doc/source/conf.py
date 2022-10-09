@@ -42,9 +42,6 @@ rst_link_suffix = ''
 rst_line_width = 78
 rst_indent = 4
 
-# https://confluence.columbia.edu/confluence/display/~alansphinx/Sphinx+Documentation
-os.environ['SPHINX_APIDOC_OPTIONS'] = "members"
-
 
 def rst_file_transform(docname):
     if docname == 'index':
@@ -79,7 +76,6 @@ extensions = [
 autosummary_generate = True
 templates_path = ['_templates']
 exclude_patterns = ['_build', '_templates', '**test**']
-autodoc_default_flags = ['members']
 
 # From https://stackoverflow.com/questions/39249466/how-to-exclude-pytest-test-functions-from-sphinx-autodoc
 # This is the expected signature of the handler for this event, cf doc
