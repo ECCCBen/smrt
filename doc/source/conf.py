@@ -98,6 +98,13 @@ exclude_patterns = ['_build', '_templates', '**test**']
 # This is the expected signature of the handler for this event, cf doc
 import re
 
+autodoc_default_options = {
+    'members': True,
+    'member-order': 'bysource',
+    'special-members': '__init__',
+    'undoc-members': False,
+    'exclude-members': '__weakref__'
+}
 
 def autodoc_skip_member_handler(app, what, name, obj, skip, options):
     # Basic approach; you might want a regex instead
