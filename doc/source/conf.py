@@ -121,6 +121,7 @@ author = u'G. Picard, M. Sandells, H. Löwe'
 # Added by Ghislain to keep the order in the source:
 autodoc_member_order = 'bysource'
 
+autoclass_content = 'both'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
