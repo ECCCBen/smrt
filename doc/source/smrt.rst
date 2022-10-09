@@ -24,4 +24,3 @@ Module contents
 
 .. automodule:: smrt
    :members:
-   : private_members:
