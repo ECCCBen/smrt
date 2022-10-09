@@ -74,7 +74,16 @@ def cryosat2_lrm():
 
     Parameters from https://earth.esa.int/web/eoportal/satellite-missions/c-missions/cryosat-2
     Altitude from https://doi.org/10.1016/j.asr.2018.04.014
+
     Beam width is 1.08 along track and 1.2 across track
+
+    Note::
+
+        nominal_gate parameter governs timing of leading edge
+
+    Example::
+
+        sensor = altimeter_list.cryosat2_lrm()
     
     """    
 
@@ -93,7 +102,19 @@ def cryosat2_sin():
 
     Parameters from https://earth.esa.int/web/eoportal/satellite-missions/c-missions/cryosat-2
     Altitude from https://doi.org/10.1016/j.asr.2018.04.014
+    
     Beam width is 1.08 along track and 1.2 across track
+
+    
+    Note::
+
+        nominal_gate parameter governs timing of leading edge
+
+        Use this sensor for pseudo-low resolution mode of CryoSat2 operating in SIN mode
+
+    Example::
+
+        sensor = altimeter_list.cryosat2_sin()
     
     """    
 
@@ -111,8 +132,17 @@ def asiras_lam(altitude=None):
     """ Return an altimeter instance for ASIRAS in Low Altitude Mode
 
     Parameters from https://earth.esa.int/web/eoportal/airborne-sensors/asiras
+    
     Beam width is 2.2 x 9.8 deg
-    """    
+
+    :param altitude: aircraft altitude in m
+
+    Example::
+
+        sensor = altimeter_list.asiras_lam(altitude=500)
+
+    """
+
     if altitude is None:
         raise SMRTError('Aircraft altitude must be defined')
     else:

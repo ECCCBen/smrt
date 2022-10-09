@@ -5,10 +5,8 @@
 
 Approximation in the medium:
  - Backscatter is computed assuming only first order scattering. The propagation is then simply given by extinction
- - Small angle approximation: to compute delay, the paths in the snow are along the z-axis. We neglect the off-nadir delay.
- This error is likely to be small (except for very deep penetration).
- - At this stage, we consider that the backscatter of layers does not depend on theta (Geometrical optics or other, not AIEM). 
- This is the isotropic assumption which is only valid for rough surfaces
+ - Small angle approximation: to compute delay, the paths in the snow are along the z-axis. We neglect the off-nadir delay. This error is likely to be small (except for very deep penetration).
+ - At this stage, we consider that the backscatter of layers does not depend on theta (Geometrical optics or other, not AIEM). This is the isotropic assumption which is only valid for rough surfaces
  
 Example::
 
