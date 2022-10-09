@@ -94,17 +94,18 @@ autosummary_generate = True
 templates_path = ['_templates']
 exclude_patterns = ['_build', '_templates', '**test**', 'setup']
 
-# From https://stackoverflow.com/questions/39249466/how-to-exclude-pytest-test-functions-from-sphinx-autodoc
-# This is the expected signature of the handler for this event, cf doc
-import re
-
 autodoc_default_options = {
-    'members': True,
+    'members': 'smrt, smrt.input',
     'member-order': 'bysource',
     'special-members': '__init__',
     'undoc-members': False,
     'exclude-members': '__weakref__'
 }
+
+
+# From https://stackoverflow.com/questions/39249466/how-to-exclude-pytest-test-functions-from-sphinx-autodoc
+# This is the expected signature of the handler for this event, cf doc
+import re
 
 def autodoc_skip_member_handler(app, what, name, obj, skip, options):
     # Basic approach; you might want a regex instead
@@ -145,6 +146,7 @@ author = u'G. Picard, M. Sandells, H. Löwe'
 # Added by Ghislain to keep the order in the source:
 autodoc_member_order = 'bysource'
 
+autoclass_content = 'both'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
