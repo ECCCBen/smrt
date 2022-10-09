@@ -110,8 +110,6 @@ def cryosat2_sin():
     
     .. note::
 
-        nominal_gate parameter governs timing of leading edge
-
         Use this sensor for pseudo-low resolution mode of CryoSat2 operating in SIN mode
 
     Example::
