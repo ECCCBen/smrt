@@ -24,5 +24,3 @@ Module contents
 
 .. automodule:: smrt
    :members:
-   :undoc-members:
-   :show-inheritance:
