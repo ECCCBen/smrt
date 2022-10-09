@@ -9,6 +9,17 @@ Approximation in the medium:
  This error is likely to be small (except for very deep penetration).
  - At this stage, we consider that the backscatter of layers does not depend on theta (Geometrical optics or other, not AIEM). 
  This is the isotropic assumption which is only valid for rough surfaces
+ 
+Example::
+
+    # Total backscatter waveform
+    m = make_model("iba", "nadir_lrm_altimetry") 
+    # Backscatter waveform split by volume, surface and interface scattering
+    m = make_model("iba", "nadir_lrm_altimetry", rtsolver_options=dict(return_contributions=True))
+    # Run the model
+    m.run(altimeter, snowpack) # Prescribed altimeter sensor and snowpack
+
+
  """
 
 import numpy as np
