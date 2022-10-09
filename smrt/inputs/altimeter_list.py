@@ -77,7 +77,7 @@ def cryosat2_lrm():
 
     Beam width is 1.08 along track and 1.2 across track
 
-    Note::
+    .. note::
 
         nominal_gate parameter governs timing of leading edge
 
@@ -106,7 +106,7 @@ def cryosat2_sin():
     Beam width is 1.08 along track and 1.2 across track
 
     
-    Note::
+    .. note::
 
         nominal_gate parameter governs timing of leading edge
 
