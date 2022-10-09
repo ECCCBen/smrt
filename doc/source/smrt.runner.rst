@@ -9,19 +9,21 @@ smrt.runner.celery\_runner module
 
 .. automodule:: smrt.runner.celery_runner
    :members:
-   : special-members:__init__:
+   :undoc-members:
+   :show-inheritance:
 
 smrt.runner.dask\_runner module
 -------------------------------
 
 .. automodule:: smrt.runner.dask_runner
    :members:
-   : special-members:__init__:
-
+   :undoc-members:
+   :show-inheritance:
 
 Module contents
 ---------------
 
 .. automodule:: smrt.runner
    :members:
-   : special-members:__init__:
+   :undoc-members:
+   :show-inheritance:
